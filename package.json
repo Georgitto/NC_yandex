@@ -1,0 +1,22 @@
+{
+  "name": "nc_yandex",
+  "version": "1.0.0",
+  "description": "Учебный проект",
+  "main": "main.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Georgitto/NC_yandex.git"
+  },
+  "author": "Georgitto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Georgitto/NC_yandex/issues"
+  },
+  "homepage": "https://github.com/Georgitto/NC_yandex#readme",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}
