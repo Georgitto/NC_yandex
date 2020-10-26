@@ -281,7 +281,7 @@ html, body {
     box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
 }
 
-.main__whether {
+.whether {
     display: inline-block;
     width: 273px;
     margin-left: 301px;
@@ -327,6 +327,70 @@ html, body {
     display: block;
 }
 
-.main__traffic {
+.container__bottom {
+    width: 100%;
+    display: inline-flex;
+    align-items: flex-start;
+}
 
+.traffic {
+    display: inline-block;
+    position: absolute;
+    top: 409px;
+    left: 579px;
+}
+
+.traffic__title {
+    font-size: 16px;
+    color: #0054B9;
+}
+
+.traffic__content {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content__current-situation {
+    background-image: url("https://yastatic.net/s3/home-static/_/t/n/RM2IxJqDgcoNFZNbH1g6NU8l0.svg");
+    margin: 0 7px 0 0;
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 31px;
+}
+
+.content__current-situation-score {
+    font-size: 28px;
+    margin-right: 10.5px;
+}
+
+.content__forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.border {
+    display: flex;
+    border-radius: 50%;
+    border-width: 2px;
+    border-color: green;
+    border-style: solid;
+    width: 17px;
+    height: 17px;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.border__score {
+    margin-left: -1px;
+    margin-top: -1px;
+    text-align: center;
+}
+
+.time {
+    font-size: 9px;
+    color: #999999;
 }
