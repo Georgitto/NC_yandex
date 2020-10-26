@@ -98,18 +98,14 @@ html, body {
 
 .main__news__title {
     padding-left: 10px;
-}
-
-.title__text {
-    margin-bottom: 8px;
-    padding-right: 12px;
-    font-family: 'YS Text','Helvetica Neue',Arial,sans-serif;
-    font-size: 16px;
+    margin-bottom: 11px;
 }
 
 .smi {
     color: #0054B9;
+    font-size: 16px;
     font-weight: bold;
+    word-spacing: -3px;
 }
 
 .msc {
@@ -118,6 +114,13 @@ html, body {
 
 .title__text__link {
     text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.title__text__link:first-child {
+    margin-left: 18px;
 }
 
 .title__text__link:hover {
@@ -127,12 +130,15 @@ html, body {
 .covid {
     color: #ee7b00;
     font-family: 'YS Text','Helvetica Neue',Arial,sans-serif;
+    margin-left: 10px;
+    font-size: 13px;
 }
 
 .title__datetime {
     font-family: Verdana,Arial,Helvetica,sans-serif;
     font-size: 11px;
     color: #999999;
+    margin-left: 14px;
 }
 
 .main__news {
@@ -148,7 +154,17 @@ html, body {
 
 .list__item {
    list-style: none;
-    margin: 8px;
+    margin-left: 8px;
+    margin-bottom: 5.4px;
+}
+
+.list__item:nth-last-child(2) {
+    margin-bottom: 4px;
+}
+
+.list__item:last-child {
+    margin-left: 28px;
+
 }
 
 .item-icon {
@@ -167,28 +183,23 @@ html, body {
 
 .item__value {
     display: inline-block;
-    padding-right: 12px;
     font-family: 'YS Text','Helvetica Neue',Arial,sans-serif;
     font-size: 13px;
 }
 
 .item__value__name {
     font-style: inherit;
-    margin-right: 6px;
+    margin-right: 4px;
     font-weight: bold;
 }
 
-.item__value:first-child {
-    padding-left: 12px;
-}
-
 .item__value__difference {
-    margin-left: 7px;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 .main__service {
-    margin: 0 267px 0 257px;
-    padding-right: 122px;
+    margin: 11.5px 243px 0 281px;
     display: inline-flex;
 }
 
@@ -197,8 +208,10 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 20px 0 20px;
+    margin: 0 0 0 0;
     text-decoration: none;
+    width: 84px;
+    height: 60px;
 }
 
 .service__container:hover {
@@ -217,13 +230,17 @@ html, body {
 }
 
 .main__search {
-    margin-left: 132px;
-    display: flex;
-    align-content: center;
+    position: absolute;
+    top: 286px;
+    margin-left: 301px;
+    height: 60px;
 }
 
 .search__logo {
-    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    left: 156px;
+    top: 285px;
 }
 
 .search__row {
@@ -234,14 +251,14 @@ html, body {
 
 .row__input {
     width: 728px;
-    height: 36px;
+    height: 33px;
     margin: 0;
     padding: 0;
     border: 2px solid #ffe600;
 }
 
 .row__button {
-    width: 88px;
+    width: 70px;
     height: 40px;
     border: none;
     background: #ffe600;
@@ -283,9 +300,11 @@ html, body {
 
 .whether {
     display: inline-block;
+    position: absolute;
     width: 273px;
     margin-left: 301px;
     margin-top: 8px;
+    top: 402px;
 }
 
 .whether__title {
@@ -393,4 +412,28 @@ html, body {
 .time {
     font-size: 9px;
     color: #999999;
+}
+
+.other {
+    position: absolute;
+    top: 409px;
+    left: 858px;
+}
+
+.other__title {
+    font-size: 16px;
+    color: #0054B9;
+    text-decoration: none;
+}
+
+.other__content {
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.content {
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    margin-right: 10px;
 }
