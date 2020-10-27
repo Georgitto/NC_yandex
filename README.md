@@ -1,1 +1,1 @@
-# NC_yandex
+# https://yandexstudy.herokuapp.com
