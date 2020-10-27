@@ -4,6 +4,13 @@ html, body {
   font-family: 'YS Text','Helvetica Neue',Arial,sans-serif;
 }
 
+.link() {
+  text-decoration: none;
+  &:hover {
+    color: rgba(255, 76, 21, 0.73);
+  }
+}
+
 .container-top {
   display: flex;
   align-items: center;
@@ -22,7 +29,7 @@ html, body {
   align-items: center;
 }
 
-.container-top__row__left_corner {
+.left_corner {
   display: inline-flex;
   align-items: center;
   height: 25px;
@@ -30,7 +37,7 @@ html, body {
   justify-content: center;
 }
 
-.left-corner__geolink {
+.left-corner__geolink-svg {
   display: inline-block;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cg fill='none'%3E%3Cpath fill='%23404040' d='M13.07 3.58l-4 9.98a.5.5 0 0 1-.95-.06L7 9 2.5 7.88a.5.5 0 0 1-.06-.95l9.98-4a.5.5 0 0 1 .65.65z'/%3E%3Cpath fill='%23F12727' d='M13.07 19.58l-4 9.98a.5.5 0 0 1-.95-.06L7 25l-4.5-1.12a.5.5 0 0 1-.06-.95l9.98-4a.5.5 0 0 1 .65.65z'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -40,31 +47,21 @@ html, body {
   width: 14px;
 }
 
-.container-top__row__left-corner__geo-link {
+.left-corner__geolink-text {
   display: inline-flex;
   align-items: center;
   padding: 0 16px 0 0;
   text-decoration: none;
   color: black;
+  .link;
 }
 
-.container-top__row__left-corner__geo-link:hover {
-  color: #ff5415;
-}
-
-.container-top__row__left-corner__privacy {
+.left-corner__privacy {
   display: inline-flex;
   align-self: center;
   color: #999999;
   text-decoration: none;
-}
-
-.container-top__row__left-corner__privacy:hover {
-  color: #ff5415;
-}
-
-.container-top__row__center {
-
+  .link;
 }
 
 .right-corner {
@@ -97,13 +94,16 @@ html, body {
 }
 
 .favorites__settings {
+  text-decoration: none;
   display: inline-block;
   position: absolute;
   top: 21px;
   left: 1236px;
+  color: black;
+  .link;
 }
 
-.main__news__title {
+.news__title {
   padding-left: 10px;
   margin-bottom: 11px;
 }
@@ -119,19 +119,16 @@ html, body {
   color: #6DA2E1;
 }
 
-.title__text__link {
+.title__text {
   text-decoration: none;
   margin-bottom: 8px;
   font-size: 16px;
   margin-left: 12px;
+  .link;
 }
 
-.title__text__link:first-child {
+.title__text:first-child {
   margin-left: 18px;
-}
-
-.title__text__link:hover {
-  color: #ff5415;
 }
 
 .covid {
@@ -184,8 +181,14 @@ html, body {
 }
 
 .item-text {
+  text-decoration: none;
+  color: black;
   font-family: 'YS Text','Helvetica Neue',Arial,sans-serif;
   font-size: 13px;
+}
+
+.item-text:hover {
+  color: #ff5415;
 }
 
 .item__value {
@@ -195,9 +198,15 @@ html, body {
 }
 
 .item__value__name {
+  color: black;
+  text-decoration: none;
   font-style: inherit;
   margin-right: 4px;
   font-weight: bold;
+}
+
+.item__value__name:hover {
+  color: #ff5415;
 }
 
 .item__value__difference {
@@ -221,7 +230,7 @@ html, body {
   height: 60px;
 }
 
-.service__container:hover {
+.service__container:hover .container__text {
   color: #ff5415;
 }
 
@@ -234,6 +243,11 @@ html, body {
 .container__icon {
   width: 44px;
   height: 44px;
+}
+
+.multi {
+  width: 18px;
+  height: 18px;
 }
 
 .main__search {
@@ -253,7 +267,7 @@ html, body {
 .search__row {
   display: inline-block;
   position: relative;
-  top: 32px;
+  top: 34px;
 }
 
 .row__input {
@@ -266,7 +280,7 @@ html, body {
 
 .row__button {
   width: 70px;
-  height: 40px;
+  height: 36px;
   border: none;
   background: #ffe600;
   box-sizing: border-box;
@@ -277,7 +291,7 @@ html, body {
 
 .main__mail-panel {
   width: 156px;
-  height: 94px;
+  height: 99px;
   position: absolute;
   left: 1326px;
   top: 9px;
@@ -290,12 +304,16 @@ html, body {
   display: inline-block;
   font-size: 13px;
   font-weight: bold;
+  color: black;
+  .link
 }
 
 .mail-panel__registration {
+  color: black;
   display: inline-block;
   font-size: 13px;
   margin-left: 22.5px;
+  .link
 }
 
 .mail-panel__body {
@@ -315,24 +333,55 @@ html, body {
   margin-left: 33px;
 }
 
+.plus {
+  color: #0080ff;
+  .link;
+}
+
 .main__covid-panel {
   width: 180px;
   height: 134px;
   position: absolute;
   left: 1326px;
-  top: 135px;
+  top: 136px;
   border-radius: 3px;
   box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
 }
 
+.covid-panel__image {
+  width: 177px;
+  height: 127px;
+  background-image: url("Screenshot_2.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 4px;
+  margin-left: 2px;
+}
+
 .main__news-panel {
-  width: 180px;
-  height: 134px;
+  width: 152px;
+  height: 84px;
+  padding: 16px 14px 12px 12.5px;
   position: absolute;
   left: 1326px;
-  top: 275px;
+  top: 279px;
   border-radius: 3px;
   box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 0 2px 6px 0 rgba(0,0,0,.1);
+}
+
+.news-panel__icon {
+
+}
+
+.news-panel__title {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 22px;
+}
+
+.news-panel__body {
+  margin-top: 11px;
+  font-size: 12px;
 }
 
 .whether {
@@ -347,12 +396,14 @@ html, body {
 .whether__title {
   font-size: 16px;
   color: #0054B9;
+  .link
 }
 
 .whether__map {
   font-size: 13px;
   margin-left: 10px;
   color: #0054B9;
+    .link
 }
 
 .whether__content {
@@ -371,6 +422,8 @@ html, body {
 .content__now {
   font-size: 28px;
   margin-left: 3px;
+  color:black;
+  .link;
 }
 
 .content__temperature {
@@ -381,6 +434,8 @@ html, body {
 .temperature__part {
   font-size: 13px;
   display: block;
+  color: black;
+  .link
 }
 
 .container__bottom {
@@ -399,6 +454,7 @@ html, body {
 .traffic__title {
   font-size: 16px;
   color: #0054B9;
+  .link
 }
 
 .traffic__content {
@@ -418,6 +474,7 @@ html, body {
 .content__current-situation-score {
   font-size: 28px;
   margin-right: 10.5px;
+  .link
 }
 
 .content__forecast {
@@ -461,6 +518,7 @@ html, body {
   font-size: 16px;
   color: #0054B9;
   text-decoration: none;
+  .link;
 }
 
 .other__content {
@@ -473,4 +531,18 @@ html, body {
   color: black;
   font-size: 13px;
   margin-right: 10px;
+  .link;
+}
+
+.under-search {
+  font-size: 13px;
+  position: absolute;
+  top: 364px;
+  left: 300px;
+  word-spacing: -0.5px;
+}
+
+.under-search__changing-part {
+  color: #999999;
+  .link;
 }
