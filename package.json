@@ -20,6 +20,7 @@
   "homepage": "https://github.com/Georgitto/NC_yandex#readme",
   "dependencies": {
     "browser-sync": "^2.26.13",
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-inject": "^5.0.5",
