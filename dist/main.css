@@ -132,7 +132,7 @@ body {
   margin: 0 252px 7px 272px;
   padding-right: 122px;
 }
-.main__news__list {
+.main__news-list {
   padding-left: 0;
   margin-top: 3px;
   margin-bottom: 0;
@@ -176,17 +176,17 @@ body {
 .item__value:not(:first-child) {
   margin-left: 12px;
 }
-.item__value__name {
+.value__name {
   color: black;
   text-decoration: none;
   font-style: inherit;
   margin-right: 3px;
   font-weight: bold;
 }
-.item__value__name:hover {
+.value__name:hover {
   color: #ff5415;
 }
-.item__value__difference {
+.value__difference {
   margin-left: 3px;
   color: #999999;
 }
