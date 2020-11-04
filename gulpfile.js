@@ -7,7 +7,9 @@ const gulp = require("gulp"),
   less = require("gulp-less"),
   autoprefixer = require("gulp-autoprefixer"),
   browserSync = require("browser-sync").create(),
-  rename = require("gulp-rename");
+  rename = require("gulp-rename"),
+  concat = require("gulp-concat");
+
 
 gulp.task("svgstore", function () {
   const svgs = gulp
@@ -54,6 +56,12 @@ gulp.task("html", function () {
   return gulp.src("./src/index.html").pipe(gulp.dest("./dist"));
 });
 
+gulp.task("js", function() {
+  gulp.src("./src/assets/scripts/animation.js")
+      .pipe(concat('index.js'))
+      .pipe(gulp.dest('./public/js'));
+});
+
 gulp.task("serve", function () {
   browserSync.init({
     server: {
@@ -63,11 +71,13 @@ gulp.task("serve", function () {
 
   gulp.watch("./src/assets/styles/**/*.less").on("change", series("less"));
   gulp.watch("./src/index.html").on("change", series("html"));
+  gulp.watch("./src/assets/scripts/animation.js").on("change", series("js"));
 
   gulp.watch("./dist/style.css").on("change", browserSync.reload);
   gulp.watch("./dist/index.html").on("change", browserSync.reload);
+  gulp.watch("./dist/dest.js").on("change", browserSync.reload);
 });
 
-gulp.task("build", series("svgstore", "less", "html"));
+gulp.task("build", series("svgstore", "less", "html", "js"));
 
-gulp.task("default", series("svgstore", parallel("html", "less"), "serve"));
+gulp.task("default", series("svgstore", parallel("html", "less"), "serve", "js"));

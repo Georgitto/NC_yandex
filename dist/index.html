@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body class="app">
+<script src="animation.js"></script>
 <div class="container-top">
     <div class="container-top__row">
         <div class="left-corner">
@@ -21,20 +22,20 @@
         </div>
         <div class="right-corner">
             <a href="#" class="right-corner__favorites"></a>
-            <a href="#" class="favorites">
-                <svg class="favorites__notifier">
-                    <path fill="rgb(203,203,203)" class="notifier__clapper" d="M18 30a3 3 0 0 0 3-3c0-1.657-1.5 0-3-17-1.5 17-3 15.343-3 17a3 3 0 0 0 3 3z"></path>
-                    <path fill="rgb(203,203,203)" class="notifier__bell" d="M15.687 12.5l.3-.164a1.5 1.5 0 0 0 .75-1.021l.142-.712a.75.75 0 0 1 .736-.603h.77a.75.75 0 0 1 .736.603l.142.712a1.5 1.5 0 0 0 .75 1.02l.3.165a5.586 5.586 0 0 1 3.24 4.47l.54 4.863c.1.906.563 1.733 1.282 2.292l.354.275a1.5 1.5 0 0 1 .534 1.548L26.25 26a1.32 1.32 0 0 1-1.28 1H11.03a1.32 1.32 0 0 1-1.28-1l-.013-.052a1.5 1.5 0 0 1 .534-1.548l.354-.275a3.375 3.375 0 0 0 1.282-2.292l.54-4.864a5.586 5.586 0 0 1 3.24-4.469z"></path>
+            <a href="#" class="right-corner__notifier __notifier">
+                <svg class="__notifier">
+                    <path fill="rgb(203,203,203)" class="__notifier__clapper" d="M18 30a3 3 0 0 0 3-3c0-1.657-1.5 0-3-17-1.5 17-3 15.343-3 17a3 3 0 0 0 3 3z"></path>
+                    <path fill="rgb(203,203,203)" class="__notifier__bell" d="M15.687 12.5l.3-.164a1.5 1.5 0 0 0 .75-1.021l.142-.712a.75.75 0 0 1 .736-.603h.77a.75.75 0 0 1 .736.603l.142.712a1.5 1.5 0 0 0 .75 1.02l.3.165a5.586 5.586 0 0 1 3.24 4.47l.54 4.863c.1.906.563 1.733 1.282 2.292l.354.275a1.5 1.5 0 0 1 .534 1.548L26.25 26a1.32 1.32 0 0 1-1.28 1H11.03a1.32 1.32 0 0 1-1.28-1l-.013-.052a1.5 1.5 0 0 1 .534-1.548l.354-.275a3.375 3.375 0 0 0 1.282-2.292l.54-4.864a5.586 5.586 0 0 1 3.24-4.469z"></path>
                 </svg>
             </a>
-            <a href="#" class="favorites__settings">
+            <a href="#" class="right-corner__settings">
                 Настройка
             </a>
         </div>
     </div>
 </div>
-<div class="main">
-    <div class="main__news">
+<div class="middle">
+    <div class="middle__news">
         <div class="news__title">
             <a href="#" class="title__text smi">
                 Сейчас в СМИ
@@ -54,7 +55,7 @@
                         </span>
                     </span>
         </div>
-        <ul class="main__news-list list">
+        <ul class="middle__news-list list">
             <li class="list__item item">
                 <div class="item-icon"></div>
                 <a href="#" class="item-text">
@@ -104,10 +105,10 @@
             </li>
         </ul>
     </div>
-    <div class="main__service service">
+    <div class="middle__service service">
         <a href="#" class="service__container container">
-            <div class="container__icon">
-                <img src="https://yastatic.net/s3/home/services/block/video.svg">
+            <div class="container__icon icon">
+                <img class="icon" src="https://yastatic.net/s3/home/services/block/video.svg">
             </div>
             <div class="container__text">
                 Видео
@@ -189,10 +190,10 @@
             </div>
         </a>
     </div>
-    <div class="search__logo">
+    <a href="#" class="search__logo">
         <img src="https://yastatic.net/s3/home-static/_/x/Q/xk8YidkhGjIGOrFm_dL5781YA.svg">
-    </div>
-    <div class="main__search search">
+    </a>
+    <div class="middle__search search">
         <div class="search__row row">
             <label>
                 <input type="text" class="row__input">
@@ -200,7 +201,7 @@
             </label>
         </div>
     </div>
-    <div class="main__mail-panel">
+    <div class="middle__mail-panel">
         <a href="#" class="mail-panel__title">
             Почта
         </a>
@@ -218,18 +219,22 @@
             </div>
         </div>
     </div>
-    <div class="main__covid-panel">
-        <div class="covid-panel__image"></div>
-    </div>
-    <div class="main__news-panel">
-        <div class="news-panel__top">
-            <div class="top__icon"></div>
-            <div class="top__title">
-                Sputnik таджикистан
-            </div>
+    <div class="middle__covid-panel covid-panel">
+        <div class="covid-panel__body body" onclick="changePos(this)">
+            <div class="body__image"></div>
         </div>
-        <div class="news-panel__body">
-            Стали известны слова Гейджи, когда Нурмагомедов плакал после боя
+    </div>
+    <div class="middle__news-panel news-panel">
+        <div class="news-panel__container" onclick="changePos(this)">
+            <div class="news-panel__top">
+                <div class="top__icon"></div>
+                <div class="top__title">
+                    Sputnik таджикистан
+                </div>
+            </div>
+            <div class="news-panel__body">
+                Стали известны слова Гейджи, когда Нурмагомедов плакал после боя
+            </div>
         </div>
     </div>
     <div class="under-search">

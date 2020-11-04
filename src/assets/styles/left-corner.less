@@ -1,0 +1,35 @@
+@import "link";
+
+.left-corner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &__geolink-svg {
+    display: inline-block;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14'%3E%3Cg fill='none'%3E%3Cpath fill='%23404040' d='M13.07 3.58l-4 9.98a.5.5 0 0 1-.95-.06L7 9 2.5 7.88a.5.5 0 0 1-.06-.95l9.98-4a.5.5 0 0 1 .65.65z'/%3E%3Cpath fill='%23F12727' d='M13.07 19.58l-4 9.98a.5.5 0 0 1-.95-.06L7 25l-4.5-1.12a.5.5 0 0 1-.06-.95l9.98-4a.5.5 0 0 1 .65.65z'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 14px;
+    width: 14px;
+  }
+
+  &__geolink-text {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 16px 0 0;
+    text-decoration: none;
+    color: black;
+    margin-left: 5.6px;
+    .link;
+  }
+
+  &__privacy {
+    display: inline-flex;
+    align-self: center;
+    color: #999999;
+    text-decoration: none;
+    .link;
+  }
+}
