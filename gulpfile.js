@@ -57,9 +57,9 @@ gulp.task("html", function () {
 });
 
 gulp.task("js", function() {
-  gulp.src("./src/assets/scripts/animation.js")
-      .pipe(concat('index.js'))
-      .pipe(gulp.dest('./public/js'));
+  return gulp.src("./src/assets/scripts/animation.js")
+      .pipe(concat("index.js"))
+      .pipe(dest("./dist"));
 });
 
 gulp.task("serve", function () {
@@ -75,9 +75,9 @@ gulp.task("serve", function () {
 
   gulp.watch("./dist/style.css").on("change", browserSync.reload);
   gulp.watch("./dist/index.html").on("change", browserSync.reload);
-  gulp.watch("./dist/dest.js").on("change", browserSync.reload);
+  gulp.watch("./dist/index.js").on("change", browserSync.reload);
 });
 
 gulp.task("build", series("svgstore", "less", "html", "js"));
 
-gulp.task("default", series("svgstore", parallel("html", "less"), "serve", "js"));
+gulp.task("default", series("svgstore", parallel("html", "less"), "js", "serve"));
